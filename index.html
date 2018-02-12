@@ -1,8 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Настроение</title>
   <meta charset="utf-8">
+  <title>Настроение</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+  <style>
+    body {
+      background: #000066;
+    }
+    .jumbotron {
+      width: 60%;
+      margin: 0 auto;
+      text-align: center;
+      color: white;
+      font-family: 'Lobster', cursive;
+      height: 100%;
+    }
+  </style>
   <script id="quotes_json" type="application/json">
     [
       {
@@ -17,27 +33,30 @@
       },
       {
         "phrase": "Если ты будешь усердно работать по 8 часов в день, то обязательно станешь боссом и начнешь работать по 12"
+      },
+      {
+        "phrase":  "Признак того, что ты добился чего-то в жизни – с тобой здороваются, а ты их не знаешь."
+      },
+      {
+        "phrase": "Хорошо там, где нас нет, но плохо, что нас нет там, где хорошо!"
+      },
+      {
+        "phrase": "Было время, когда удивляло хамство. Теперь удивляет вежливость. Да, что удивляет... вызывает подозрение."
+      },
+      {
+        "phrase": "Глупый мечтает стать умнее, умный мечтает стать мудрее, а мудрый мечтает о разных глупостях…"
       }
     ]
   </script>
-  <style>
-    body {
-        background-color: yellow;
-    }
-    h1 {
-        color: red;
-    }
-  </style>
 </head>
 <body>
-    <h1 id="joke">Funny Joke )))</h1>
-    <script>
-        var quotes = JSON.parse(
-            document.getElementById('quotes_json').innerHTML);
-        quote = quotes[Math.floor(Math.random() * quotes.length)];
-        var joke = document.getElementById("joke");
-        joke.innerHTML = quote.phrase;
-    </script>
+  <div class="jumbotron">
+    <h1 class="display-4" id="my-display">A Joke!</h1>
+    <img style="border-radius: 50%" src="http://bipbap.ru/wp-content/uploads/2017/10/3-6.png" alt=""funny picture>
+  </div>
+  <script type="text/javascript">
+    var data = JSON.parse(document.getElementById('quotes_json').innerHTML);
+    document.getElementById("my-display").textContent = data[Math.floor(Math.random()*data.length)].phrase;
+  </script>
 </body>
 </html>
-
