@@ -17,9 +17,10 @@ body {
 }
 
 .text-vertical-center {
-  display: table-cell;
-  text-align: center;
-  vertical-align: middle;
+  width: 800px;
+  margin: 0 auto;
+  text-align:center;
+  padding-top: 15%;
 }
 
 /* Custom Button Styles */
@@ -144,7 +145,7 @@ hr.small {
 /* Header */
 
 .header {
-  display: table;
+  /*display: table;*/
   position: relative;
   width: 100%;
   height: 100%;
