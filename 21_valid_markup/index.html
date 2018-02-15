@@ -6,7 +6,7 @@
   <!--<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">-->
   <title>Агенство недвижимости</title>
   <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/stylish-portfolio.css" rel="stylesheet">
+  <link href="css/stylish-portfolio.min.css" rel="stylesheet">
 
 
   <!-- Custom Fonts -->
@@ -22,7 +22,7 @@
 </head>
 
 <body>
-
+  <div class="container">
   <!-- Navigation -->
   <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
   <nav id="sidebar-wrapper">
@@ -184,57 +184,11 @@
   <script src="js/jquery-1.11.1.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+    <script src="js/logic.min.js"></script>
 
-  <script>
-    ymaps.ready(init);
-    function init(){
-      var map = new ymaps.Map("map", {
-        center: [55.740684, 37.618174],
-        zoom: 15
-        // controls: []
-      });
-      map.behaviors.disable('scrollZoom');
-      placemark = new ymaps.Placemark([55.740684, 37.618174], {
-        hintContent: 'Твой Дом',
-        balloonContentHeader: 'Твой Дом',
-        balloonContentBody: 'Москва, Старомонетный переулок, 10'
-      });
-      map.geoObjects.add(placemark);
-    }
-  </script>
 
   <!-- Custom Theme JavaScript -->
-  <script>
-    // Closes the sidebar menu
-    $("#menu-close").click(function(e) {
-      e.preventDefault();
-      $("#sidebar-wrapper").toggleClass("active");
-    });
-
-    // Opens the sidebar menu
-    $("#menu-toggle").click(function(e) {
-      e.preventDefault();
-      $("#sidebar-wrapper").toggleClass("active");
-    });
-
-    // Scrolls to the selected menu item on the page
-    $(function() {
-      $('a[href*=#]:not([href=#])').click(function() {
-        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') || location.hostname == this.hostname) {
-
-          var target = $(this.hash);
-          target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-          if (target.length) {
-            $('html,body').animate({
-              scrollTop: target.offset().top
-            }, 1000);
-            return false;
-          }
-        }
-      });
-    });
-  </script>
-
+  </div>
 </body>
 
 </html>
