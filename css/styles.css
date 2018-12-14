@@ -1,0 +1,198 @@
+@font-face {
+  font-family: "Montserrat-Bold";
+  src: url("../fonts/Montserrat-Bold.ttf") format('truetype');
+}
+
+@font-face {
+  font-family: "Poppins-Regular";
+  src: url("../fonts/Poppins-Regular.ttf") format('truetype');
+}
+
+:root {
+  --main-font-family:"Poppins-Regular", arial;
+}
+
+/* Modal */
+.modal-wrapper {
+  /*background: rgba(0, 173, 95, 0.8);*/
+  background:
+  linear-gradient(180deg, #0e81d6, rgba(0, 173, 95, 0.8)),
+  url('../img/main-background.jpg') no-repeat center;
+  background-size: cover;
+  padding: 20px;
+}
+
+.modal {
+  min-width: 280px;
+  margin: auto;
+  display: flex;
+  background-color: white;
+  flex-direction: column-reverse;
+}
+
+.contact-info {
+  flex-grow: 1;
+  padding: 30px 15px 60px 15px;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.contact-info-item__icon {
+  padding-right: 25px;
+}
+.contact-info-item {
+  margin-bottom: 45px;
+  width: 250px;
+  max-width: 100%;
+  display:flex;
+  justify-content: flex-start;
+}
+
+.contact-info-item:last-child {
+  margin-bottom: 0;
+}
+
+.contact-info-item__title {
+  margin-bottom: 20px;
+  font-size: 18px;
+  color: #fff;
+}
+
+.contact-info-item__text {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #999;
+}
+
+.contact-form-item__label {
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  font-size: 12px;
+  display: block;
+  color: #555;
+}
+
+.contact-info-item__link {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #00ad5f;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 50px 15px;
+}
+
+.contact-form-item__input {
+  position: relative;
+  color: #666;
+  display: block;
+  height: 55px;
+  padding: 25px;
+  border: 1px solid #dadada;
+  width: 100%;
+  font-size: 18px;
+  outline: transparent solid 2px;
+  outline-offset: 6px;
+  z-index: 3;
+  transition: outline-offset 0.4s ease;
+}
+
+.contact-form-item__input:focus {
+    z-index:4;
+    outline: 2px solid #00ad5f;
+    outline-offset: 0px;
+    border-width: 0;
+}
+
+
+.contact-form-item__input_row {
+    margin-bottom: -1px;
+}
+
+.contact-form__title {
+  font-size: 30px;
+  margin-bottom: 60px;
+  font-weight: normal;
+  color: #333;
+}
+
+.contact-form-item {
+  z-index: 2;
+  margin-bottom: 35px;
+  width: 100%;
+}
+
+.contact-form-item:last-of-type {
+  margin-bottom: 0;
+}
+
+.contact-form__button {
+  font: 12px "Montserrat-Bold";
+  color: #fff;
+  text-transform: uppercase;
+  background-color: #00ad5f;
+  display: block;
+  margin-top: 23px;
+  height: 50px;
+  padding: 0 20px;
+}
+
+.contact-form__button:hover, .contact-form__button:focus {
+  background-color: #333;
+}
+
+.contact-form-item__row {
+  display: flex;
+  flex-direction: column;
+}
+
+
+@media only screen and (min-width: 576px) {
+  .contact-form {
+    padding: 55px 30px;
+  }
+  .contact-form-item__row {
+    flex-direction: row;
+  }
+  .contact-form-item__input_row {
+    margin-right: -1px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .modal {
+    flex-direction: row;
+  }
+  .contact-form {
+    flex: 60%;
+  }
+  .contact-info {
+    flex: 40%;
+  }
+
+}
+
+@media only screen and (min-width: 992px) {
+  .contact-form {
+    flex: 50%;
+    padding: 55px;
+  }
+  .contact-info {
+    flex: 50%;
+  }
+  .modal {
+    max-width: 1120px;
+  }
+}
+
+
+
+
+
